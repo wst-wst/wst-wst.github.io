@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
-    <meta name="description" content="基础准备 安装Node和Git： Node：https:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F; Git：https:&#x2F;&#x2F;git-scm.com&#x2F;   检测是否安装成功： MacOS：在终端Terminal里输入以下命令。如果正常显示软件版本，则安装完成。 123node --versionnpm --versiongit --version      打开终端： MacOS：CMD+空格，使用">
+    <meta name="description" content="基础准备 安装Node和Git： Node：https:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F; Git：https:&#x2F;&#x2F;git-scm.com&#x2F;   检测是否安装成功： MacOS：在终端Terminal里输入以下命令。如果正常显示软件版本，则安装完成。 123node --versionnpm --versiongit --version     打开终端： MacOS：CMD+空格，使用全">
 <meta property="og:type" content="article">
 <meta property="og:title" content="How to Build a GitHub Page">
 <meta property="og:url" content="https://github.com/wst-wst/wst-wst.github.io/build_github_page.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="基础准备 安装Node和Git： Node：https:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F; Git：https:&#x2F;&#x2F;git-scm.com&#x2F;   检测是否安装成功： MacOS：在终端Terminal里输入以下命令。如果正常显示软件版本，则安装完成。 123node --versionnpm --versiongit --version      打开终端： MacOS：CMD+空格，使用">
+<meta property="og:description" content="基础准备 安装Node和Git： Node：https:&#x2F;&#x2F;nodejs.cn&#x2F;download&#x2F; Git：https:&#x2F;&#x2F;git-scm.com&#x2F;   检测是否安装成功： MacOS：在终端Terminal里输入以下命令。如果正常显示软件版本，则安装完成。 123node --versionnpm --versiongit --version     打开终端： MacOS：CMD+空格，使用全">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-09-26T16:01:24.780Z">
-<meta property="article:modified_time" content="2024-09-28T18:02:14.427Z">
+<meta property="article:modified_time" content="2024-09-28T18:10:10.774Z">
 <meta property="article:author" content="wst">
 <meta name="twitter:card" content="summary">
     
@@ -163,15 +163,11 @@
 </ul>
 </li>
 </ol>
-<blockquote>
 <ul>
 <li>打开<code>终端</code>：<ul>
 <li>MacOS：<code>CMD</code>+<code>空格</code>，使用<code>全局搜索</code>搜索并打开<code>终端Terminal</code></li>
 </ul>
 </li>
-</ul>
-</blockquote>
-<ul>
 <li>安装<code>Node.js</code>后提示<code>Make sure that /usr/local/bin is in your $PATH.</code>，可在<code>终端Terminal</code>里输入<code>export PATH=$PATH:/usr/local/bin</code>。</li>
 </ul>
 <h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h3><p>在<code>终端Terminal</code>里输入命令安装Hexo：</p>
@@ -184,9 +180,7 @@
 <li>赋予目录管理员权限：在终端输入命令<code>sudo chown -R your_user_name /usr/local/lib/node_modules</code>，其中<code>your_user_name</code>是电脑当前的用户名，输入命令回车后可能需要输入电脑的解锁密码，输入密码后回车即可。</li>
 <li>在MacOS上安装<code>Hexo</code>需要添加<code>sudo</code>命令：<code>sudo npm install -g hexo-cli</code></li>
 </ol>
-<blockquote>
 <p>参考资料：</p>
-</blockquote>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/#">安装Hexo的官方指南</a></li>
 <li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_33154343/article/details/102887721/">macOS执行npm install -g hexo-cli失败的解决方法</a></li>
@@ -194,9 +188,7 @@
 <h3 id="建站"><a href="#建站" class="headerlink" title="建站"></a>建站</h3><p>在终端输入命令<code>hexo init &lt;folder&gt;</code>、在本地新建文件夹并生成所需材料。其中，<code>&lt;folder&gt;</code>是文件夹名称，也就是你的站点文件夹根目录。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo init &lt;folder&gt;</span><br><span class="line">cd &lt;folder&gt;</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
 
-<blockquote>
 <p>如何找到文件夹：</p>
-</blockquote>
 <ul>
 <li>全局搜索法：（MacOS）<code>CMD</code> + <code>空格</code>，搜索文件夹名称即可找到。</li>
 <li>终端法：在终端输入<code>cd &lt;folder&gt;</code>，即可将终端路径切换到该文件夹下。</li>
@@ -207,9 +199,7 @@
 <li>GitHub网站：点击个人头像，在<code>Settings</code>里找到<code>SSH and GPG Keys</code>，点击<code>New SSH Keys</code>；填写<code>Title</code>，并在<code>Key</code>里粘贴SSH Key，点击<code>Add SSH Keys</code>即可</li>
 <li>电脑本地：在终端输入<code>ssh -T git@github.com</code>，看到<code>Are you sure you want to continue connecting (yes/no/[fingerprint])?</code>后输入<code>yes</code>回车，即可看到<code>Hi &lt;your_GitHub_name&gt;! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></li>
 </ul>
-<blockquote>
 <p>如何将GitHub Repository从<code>Private</code>改为<code>Public</code>：</p>
-</blockquote>
 <ol>
 <li>在GitHub找到对应仓库，在仓库的<code>Settings</code>里下拉找到<code>Options</code>标签</li>
 <li>下拉找到<code>Danger Zone</code>部分，点击<code>Change repository visibility</code>，逐步确认即可</li>
@@ -234,11 +224,9 @@
 </li>
 </ul>
 <p>如果在同一个电脑使用过不同的GitHub账号Git Push内容，则可能会出现<code>remote: Permission to A/A.github.io.git denied to B.</code>的问题，这是因为Git使用了B的账号名称和身份令牌进行Push。解决方法：<code>CMD</code> + <code>空格</code>搜索<code>钥匙串访问</code>并打开，找到<code>github.com</code>右键删除或者双击修改账号和密码。</p>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><blockquote>
-<ul>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ul>
 <li><a href="https://github.com/Ailln/awesome-hexo-theme">Awesome Hexo Theme</a>：根据 Github 影响力和实际使用体验筛选出 10 个精致的 Hexo 主题</li>
 </ul>
-</blockquote>
 <h3 id="cactus"><a href="#cactus" class="headerlink" title="cactus"></a>cactus</h3><ul>
 <li><p><a href="https://github.com/probberechts/hexo-theme-cactus">GitHub</a></p>
 </li>
