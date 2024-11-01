@@ -8,7 +8,7 @@
       <link href="/Statistics-CorrelationAnalysis.html"/>
       <url>/Statistics-CorrelationAnalysis.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h1><p>变量： $X$和$Y$<br>过程：</p><ol><li>先分别对变量排序（<code>row_number</code>）得到序号<code>rn</code>，再分别对变量$X$和$Y$<code>dense_rank()</code>排序得到<code>dr</code>，针对<code>dr</code>计算<code>rn</code>的平均数作为变量的<code>Rank</code> $R(X)$和$R(Y)$。</li><li>计算$d_i &#x3D; R(X_i) - R(Y_i)$</li><li>计算$r &#x3D; \rho &#x3D; 1 - \frac{6\sum d_i^2}{n(n^2 - 1)}$</li><li>T检验统计量 $t &#x3D; r \sqrt{ \frac{n - 2}{1 - r^2} }$，服从自由度为$n-2$的$t$分布</li><li>应用Excel计算$p$值：<code>TDIST(ABS(t), n-2, 2)</code>，其中2表示双边检验（可改为1，表示单边检验）</li></ol>]]></content>
+        <content type="html"><![CDATA[<h1 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h1><p>应用SQL和Excel计算Spearman相关系数和$p$值：<br>变量： $X$和$Y$<br>过程：</p><ol><li>先分别对变量排序（<code>row_number</code>）得到序号<code>rn</code>，再分别对变量$X$和$Y$<code>dense_rank()</code>排序得到<code>dr</code>，针对<code>dr</code>计算<code>rn</code>的平均数作为变量的<code>Rank</code> $R(X)$和$R(Y)$。</li><li>计算$d_i &#x3D; R(X_i) - R(Y_i)$</li><li>计算$r &#x3D; \rho &#x3D; 1 - \frac{6\sum d_i^2}{n(n^2 - 1)}$</li><li>T检验统计量 $t &#x3D; r \sqrt{ \frac{n - 2}{1 - r^2} }$，服从自由度为$n-2$的$t$分布</li><li>应用Excel计算$p$值：<code>TDIST(ABS(t), n-2, 2)</code>，其中2表示双边检验（可改为1，表示单边检验）</li></ol>]]></content>
       
       
       
