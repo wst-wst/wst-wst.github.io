@@ -8,7 +8,7 @@
       <link href="/Markdown.html"/>
       <url>/Markdown.html</url>
       
-        <content type="html"><![CDATA[<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul><li>插入超链接：<code>[文本](超链接网址)</code></li><li>居中引用：<code>&#123;% cq %&#125;blah blah blah&#123;% endcq %&#125;</code></li><li>插入图片：<code>![图片标题](图片路径)</code>，如<code>![Alt text](/path/to/img.jpg)</code></li></ul><h2 id="Hexo格式"><a href="#Hexo格式" class="headerlink" title="Hexo格式"></a>Hexo格式</h2><ul><li>文章列表显示预览、不显示全文，可在文章正文开头添加：<code>&lt;!-- more --&gt;</code></li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="段落"><a href="#段落" class="headerlink" title="段落"></a>段落</h2><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><ul><li>插入超链接：<code>[文本](超链接网址)</code></li><li>居中引用：<code>&#123;% cq %&#125;blah blah blah&#123;% endcq %&#125;</code></li><li>插入图片：<code>![图片标题](图片路径)</code>，如<code>![Alt text](/path/to/img.jpg)</code></li></ul><h2 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h2><ul><li>字体加粗：<code>**加粗的内容**</code>，效果如<strong>加粗的内容</strong></li></ul><h2 id="Hexo格式"><a href="#Hexo格式" class="headerlink" title="Hexo格式"></a>Hexo格式</h2><ul><li>文章列表显示预览、不显示全文，可在文章正文开头添加：<code>&lt;!-- more --&gt;</code></li></ul>]]></content>
       
       
       
