@@ -4,7 +4,26 @@
   
     
     <entry>
-      <title>Statistics-CorrelationAnalysis</title>
+      <title>Statistics | Simpson&#39;s Paradox</title>
+      <link href="/Statistics-SimpsonParadox.html"/>
+      <url>/Statistics-SimpsonParadox.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="Definition-定义"><a href="#Definition-定义" class="headerlink" title="Definition 定义"></a>Definition 定义</h1><p>辛普森悖论（Simpson’s Paradox）是概率和统计中的一种现象——两组数据分别观察时都具有某种性质，但合并到一起后性质消失或相反。</p><h1 id="Reference-参考"><a href="#Reference-参考" class="headerlink" title="Reference 参考"></a>Reference 参考</h1><ul><li>Simpson, E. H. (1951). <strong>The interpretation of interaction in contingency tables</strong>. Journal of the Royal Statistical Society: Series B (Methodological), 13(2), 238-241.</li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Statistics </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Statistics | Correlation Analysis</title>
       <link href="/Statistics-CorrelationAnalysis.html"/>
       <url>/Statistics-CorrelationAnalysis.html</url>
       
