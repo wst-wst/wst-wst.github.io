@@ -19,6 +19,12 @@ $(document).ready(function() {
     $("#header > #nav > ul").toggleClass("responsive");
   });
 
+  $(document).on('click', '.fold_hider', function(){
+    $('>.fold', this.parentNode).slideToggle();
+    $('>:first', this).toggleClass('open');
+  });
+  //默认情况下折叠
+  $("div.fold").css("display","none");
 
   /**
    * Controls the different versions of  the menu in blog post articles 
@@ -110,4 +116,8 @@ $(document).ready(function() {
       });
     }
   }
+});
+
+$(document).ready(function(){
+
 });
