@@ -14,7 +14,7 @@
 <meta property="og:description" content="Spearman应用SQL和Excel计算Spearman相关系数和$p$值：变量： $X$和$Y$过程：  先分别对变量排序（row_number）得到序号rn，再分别对变量$X$和$Y$dense_rank()排序得到dr，针对dr计算rn的平均数作为变量的Rank $R(X)$和$R(Y)$。 计算$d_i &#x3D; R(X_i) - R(Y_i)$ 计算$r &#x3D; \rho &amp;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-11-01T13:10:01.000Z">
-<meta property="article:modified_time" content="2025-01-26T15:07:39.628Z">
+<meta property="article:modified_time" content="2025-01-26T15:24:21.055Z">
 <meta property="article:author" content="wst">
 <meta property="article:tag" content="Statistics">
 <meta property="article:tag" content="Correlation">
@@ -128,7 +128,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spearman"><span class="toc-number">1.</span> <span class="toc-text">Spearman</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spearman"><span class="toc-number">1.</span> <span class="toc-text">Spearman</span></a></li></ol>
       </div>
     
   </span>
@@ -173,7 +173,7 @@
   
 
   <div class="content e-content" itemprop="articleBody">
-    <h1 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h1><p>应用SQL和Excel计算Spearman相关系数和$p$值：<br>变量： $X$和$Y$<br>过程：</p>
+    <h2 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h2><p>应用SQL和Excel计算Spearman相关系数和$p$值：<br>变量： $X$和$Y$<br>过程：</p>
 <ol>
 <li>先分别对变量排序（<code>row_number</code>）得到序号<code>rn</code>，再分别对变量$X$和$Y$<code>dense_rank()</code>排序得到<code>dr</code>，针对<code>dr</code>计算<code>rn</code>的平均数作为变量的<code>Rank</code> $R(X)$和$R(Y)$。</li>
 <li>计算$d_i &#x3D; R(X_i) - R(Y_i)$</li>
@@ -210,7 +210,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Spearman"><span class="toc-number">1.</span> <span class="toc-text">Spearman</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spearman"><span class="toc-number">1.</span> <span class="toc-text">Spearman</span></a></li></ol>
       </div>
     
 

@@ -8,7 +8,7 @@
       <link href="/Statistics-SimpsonParadox.html"/>
       <url>/Statistics-SimpsonParadox.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Definition-定义"><a href="#Definition-定义" class="headerlink" title="Definition 定义"></a>Definition 定义</h1><p>辛普森悖论（Simpson’s Paradox）是概率和统计中的一种现象——两组数据分别观察时都具有某种性质，但合并到一起后性质消失或相反。</p><h1 id="Reference-参考"><a href="#Reference-参考" class="headerlink" title="Reference 参考"></a>Reference 参考</h1><ul><li>Simpson, E. H. (1951). <strong>The interpretation of interaction in contingency tables</strong>. Journal of the Royal Statistical Society: Series B (Methodological), 13(2), 238-241.</li></ul>]]></content>
+        <content type="html"><![CDATA[<h2 id="Definition-定义"><a href="#Definition-定义" class="headerlink" title="Definition 定义"></a>Definition 定义</h2><p>辛普森悖论（Simpson’s Paradox）是概率和统计中的一种现象——两组数据分别观察时都具有某种性质，但合并到一起后性质消失或相反。</p><h2 id="References-参考"><a href="#References-参考" class="headerlink" title="References 参考"></a>References 参考</h2><ul><li>Simpson, E. H. (1951). <a href="https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.2517-6161.1951.tb00088.x"><strong>The interpretation of interaction in contingency tables</strong></a>. Journal of the Royal Statistical Society: Series B (Methodological), 13(2), 238-241.</li></ul>]]></content>
       
       
       
@@ -27,7 +27,7 @@
       <link href="/Statistics-CorrelationAnalysis.html"/>
       <url>/Statistics-CorrelationAnalysis.html</url>
       
-        <content type="html"><![CDATA[<h1 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h1><p>应用SQL和Excel计算Spearman相关系数和$p$值：<br>变量： $X$和$Y$<br>过程：</p><ol><li>先分别对变量排序（<code>row_number</code>）得到序号<code>rn</code>，再分别对变量$X$和$Y$<code>dense_rank()</code>排序得到<code>dr</code>，针对<code>dr</code>计算<code>rn</code>的平均数作为变量的<code>Rank</code> $R(X)$和$R(Y)$。</li><li>计算$d_i &#x3D; R(X_i) - R(Y_i)$</li><li>计算$r &#x3D; \rho &#x3D; 1 - \frac{6\sum d_i^2}{n(n^2 - 1)}$</li><li>T检验统计量 $t &#x3D; r \sqrt{ \frac{n - 2}{1 - r^2} }$，服从自由度为$n-2$的$t$分布</li><li>应用Excel计算$p$值：<code>TDIST(ABS(t), n-2, 2)</code>，其中2表示双边检验（可改为1，表示单边检验）</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h2><p>应用SQL和Excel计算Spearman相关系数和$p$值：<br>变量： $X$和$Y$<br>过程：</p><ol><li>先分别对变量排序（<code>row_number</code>）得到序号<code>rn</code>，再分别对变量$X$和$Y$<code>dense_rank()</code>排序得到<code>dr</code>，针对<code>dr</code>计算<code>rn</code>的平均数作为变量的<code>Rank</code> $R(X)$和$R(Y)$。</li><li>计算$d_i &#x3D; R(X_i) - R(Y_i)$</li><li>计算$r &#x3D; \rho &#x3D; 1 - \frac{6\sum d_i^2}{n(n^2 - 1)}$</li><li>T检验统计量 $t &#x3D; r \sqrt{ \frac{n - 2}{1 - r^2} }$，服从自由度为$n-2$的$t$分布</li><li>应用Excel计算$p$值：<code>TDIST(ABS(t), n-2, 2)</code>，其中2表示双边检验（可改为1，表示单边检验）</li></ol>]]></content>
       
       
       
@@ -69,7 +69,7 @@
       <link href="/Tools.html"/>
       <url>/Tools.html</url>
       
-        <content type="html"><![CDATA[<blockquote><p>记录好用的工具&#x2F;网页&#x2F;应用</p></blockquote><h2 id="Color-色彩"><a href="#Color-色彩" class="headerlink" title="Color 色彩"></a>Color 色彩</h2><ul><li>渐变色生成器<a href="https://meyerweb.com/eric/tools/color-blend/">Color Belender</a></li><li>调色盘<a href="https://colorbrewer2.org/">Color Brewer</a></li><li>调色盘<a href="https://www.materialpalette.com/">Material Design Palette</a></li></ul><h2 id="Picture-图片"><a href="#Picture-图片" class="headerlink" title="Picture 图片"></a>Picture 图片</h2><ul><li>录屏&#x2F;录制动图 <a href="https://www.screentogif.com/">Screen to Gif</a></li><li>录屏&#x2F;截图 <a href="https://www.snipaste.com/">Snipaste</a></li></ul><h2 id="Plot-制图"><a href="#Plot-制图" class="headerlink" title="Plot 制图"></a>Plot 制图</h2><ul><li>PowerPoint图表制作 <a href="https://www.think-cell.com/zh/">Think-cell</a></li><li>词云绘制 <a href="http://www.wordle.net/">Wordle</a></li></ul><h2 id="PPT-Slide"><a href="#PPT-Slide" class="headerlink" title="PPT &#x2F; Slide"></a>PPT &#x2F; Slide</h2><ul><li>阿里巴巴矢量图标库 <a href="https://www.iconfont.cn/">iconfont</a></li></ul>]]></content>
+        <content type="html"><![CDATA[<blockquote><p>记录好用的工具&#x2F;网页&#x2F;应用</p></blockquote><h2 id="Color-色彩"><a href="#Color-色彩" class="headerlink" title="Color 色彩"></a>Color 色彩</h2><ul><li>渐变色生成器<a href="https://meyerweb.com/eric/tools/color-blend/">Color Belender</a></li><li>调色盘<a href="https://colorbrewer2.org/">Color Brewer</a></li><li>调色盘<a href="https://www.materialpalette.com/">Material Design Palette</a></li></ul><h2 id="Picture-图片"><a href="#Picture-图片" class="headerlink" title="Picture 图片"></a>Picture 图片</h2><ul><li>录屏&#x2F;录制动图 <a href="https://www.screentogif.com/">Screen to Gif</a></li><li>录屏&#x2F;截图 <a href="https://www.snipaste.com/">Snipaste</a></li></ul><h2 id="Plot-制图"><a href="#Plot-制图" class="headerlink" title="Plot 制图"></a>Plot 制图</h2><ul><li>PowerPoint图表制作 <a href="https://www.think-cell.com/zh/">Think-cell</a></li><li>词云绘制 <a href="http://www.wordle.net/">Wordle</a></li></ul><h2 id="PPT-Slide-幻灯片"><a href="#PPT-Slide-幻灯片" class="headerlink" title="PPT &#x2F; Slide 幻灯片"></a>PPT &#x2F; Slide 幻灯片</h2><ul><li>阿里巴巴矢量图标库 <a href="https://www.iconfont.cn/">iconfont</a></li></ul>]]></content>
       
       
       
