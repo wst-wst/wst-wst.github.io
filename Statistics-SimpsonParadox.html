@@ -14,7 +14,7 @@
 <meta property="og:description" content="Definition 定义辛普森悖论（Simpson’s Paradox）是概率和统计中的一种现象——两组数据分别观察时都具有某种性质&#x2F;趋势，但合并到一起后性质&#x2F;趋势消失或相反。  在解读数据时，需要考虑更多细分因素、考虑可能存在的混淆变量（Confounder）。  例子医疗：肾结石治疗方案效果有两种肾结石治疗方案（A、B），为了比较两种方案的成功率（成功率 &#x3D; 成">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-26T15:12:10.000Z">
-<meta property="article:modified_time" content="2025-01-28T04:47:45.962Z">
+<meta property="article:modified_time" content="2025-01-28T04:56:15.569Z">
 <meta property="article:author" content="wst">
 <meta property="article:tag" content="Statistics">
 <meta name="twitter:card" content="summary">
@@ -129,7 +129,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">Definition 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BB%E7%96%97%EF%BC%9A%E8%82%BE%E7%BB%93%E7%9F%B3%E6%B2%BB%E7%96%97%E6%96%B9%E6%A1%88%E6%95%88%E6%9E%9C"><span class="toc-number">2.1.</span> <span class="toc-text">医疗：肾结石治疗方案效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E5%95%86%EF%BC%9A%E6%94%AF%E4%BB%98%E8%BD%AC%E5%8C%96%E7%8E%87%E6%B3%A2%E5%8A%A8%E5%BD%92%E5%9B%A0"><span class="toc-number">2.2.</span> <span class="toc-text">电商：支付转化率波动归因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References-%E5%8F%82%E8%80%83"><span class="toc-number">3.</span> <span class="toc-text">References 参考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">Definition 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BB%E7%96%97%EF%BC%9A%E8%82%BE%E7%BB%93%E7%9F%B3%E6%B2%BB%E7%96%97%E6%96%B9%E6%A1%88%E6%95%88%E6%9E%9C"><span class="toc-number">2.1.</span> <span class="toc-text">医疗：肾结石治疗方案效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References-%E5%8F%82%E8%80%83"><span class="toc-number">3.</span> <span class="toc-text">References 参考</span></a></li></ol>
       </div>
     
   </span>
@@ -197,13 +197,13 @@
 <td align="center">$A$</td>
 <td align="center">300</td>
 <td align="center">240</td>
-<td align="center">$80%$</td>
+<td align="center">$80 %$</td>
 </tr>
 <tr>
 <td align="center">$B$</td>
 <td align="center">300</td>
 <td align="center">228</td>
-<td align="center">$76%$</td>
+<td align="center">$76 %$</td>
 </tr>
 </tbody></table>
 <p>如果仅参考上表的数据，很容易会得出“方案A的治疗成功率更高、疗效更好”的结论；但如果考虑“结石大小”，各方案的成功率又会如何呢？</p>
@@ -229,81 +229,29 @@
 <td align="center">$A$</td>
 <td align="center">200</td>
 <td align="center">180</td>
-<td align="center">$90%$</td>
+<td align="center">$90 %$</td>
 </tr>
 <tr>
 <td align="center">大</td>
 <td align="center">$B$</td>
 <td align="center">220</td>
 <td align="center">153</td>
-<td align="center">$69.55%$</td>
+<td align="center">$69.55 %$</td>
 </tr>
 <tr>
 <td align="center">小</td>
 <td align="center">$B$</td>
 <td align="center">80</td>
 <td align="center">75</td>
-<td align="center">$93.75%$</td>
+<td align="center">$93.75 %$</td>
 </tr>
 </tbody></table>
 <p>如果考虑“结石大小”变量，不论是大结石还是小结石，方案B的治疗成功率都高于方案A（与前面的结论相反）。为何会出现这样的现象呢？仔细一看，</p>
 <ul>
 <li>子集存在差异：各个方案里的“大结石”治疗成功率都低于“小结石”</li>
-<li>子集占比不同：在方案A的治疗案例中，高成功率的“小结石”治疗案例占比高（$66.67%$）；在方案B的治疗案例中，低成功率的“大结石”治疗案例占比高（$73.3%$）</li>
+<li>子集占比不同：在方案A的治疗案例中，高成功率的“小结石”治疗案例占比高（$66.67 %$）；在方案B的治疗案例中，低成功率的“大结石”治疗案例占比高（$73.3 %$）</li>
 </ul>
 <p>综合起来，出现了“辛普森悖论”现象。</p>
-<h3 id="电商：支付转化率波动归因"><a href="#电商：支付转化率波动归因" class="headerlink" title="电商：支付转化率波动归因"></a>电商：支付转化率波动归因</h3><p>辛普森悖论也会出现在指标归因分析中。电商业务场景中，核心会关注活跃用户（DAU，Daily Active User）的支付转化率（支付转化率 &#x3D; DAC &#x2F; DAU；DAC即支付用户数，Daily Active Customer）。<br>假设某个电商App的客户端有两种操作系统——Android和iOS，Android本周的支付转化率相较上周下降0.25pp，iOS本周的支付转化率相较上周提升0.3pp。</p>
-<table>
-<thead>
-<tr>
-<th align="center">操作系统</th>
-<th align="right">支付转化率（上周）</th>
-<th align="right">支付转化率（本周）</th>
-<th align="right">周环比差值（本周 - 上周）</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">Android</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">-0.25pp</td>
-</tr>
-<tr>
-<td align="center">iOS</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right">+0.3pp</td>
-</tr>
-</tbody></table>
-<p>已知本周上线的一个运营策略为该电商App带来了不少新用户，新用户的支付转化率表现通常高于老用户（新用户优惠券补贴力度更大）。</p>
-<div>
-<table border="1" width="400" height="100">
-  <thead>
-    <tr style="text-align: center;">
-      <th rowspan="2">操作系统</th>
-      <th colspan="3">上周</th>
-      <th colspan="3">本周</th>
-      <th>周环比差值</th>
-    </tr>
-    <tr>
-      <th>DAU</th>
-      <th>DAC</th>
-      <th>支付转化率</th>
-      <th>DAU</th>
-      <th>DAC</th>
-      <th>支付转化率</th>
-      <th>支付转化率</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td bgcolor="#D7000F"> #D7000F </td><td></td>
-    </tr>
-  </tbody>
-</table>
-</div>
-
-<p>Android 1000 100 10%</p>
 <h2 id="References-参考"><a href="#References-参考" class="headerlink" title="References 参考"></a>References 参考</h2><ul>
 <li>Simpson, E. H. (1951). <a target="_blank" rel="noopener" href="https://rss.onlinelibrary.wiley.com/doi/abs/10.1111/j.2517-6161.1951.tb00088.x"><strong>The interpretation of interaction in contingency tables</strong></a>. Journal of the Royal Statistical Society: Series B (Methodological), 13(2), 238-241.</li>
 </ul>
@@ -344,7 +292,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">Definition 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BB%E7%96%97%EF%BC%9A%E8%82%BE%E7%BB%93%E7%9F%B3%E6%B2%BB%E7%96%97%E6%96%B9%E6%A1%88%E6%95%88%E6%9E%9C"><span class="toc-number">2.1.</span> <span class="toc-text">医疗：肾结石治疗方案效果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%94%B5%E5%95%86%EF%BC%9A%E6%94%AF%E4%BB%98%E8%BD%AC%E5%8C%96%E7%8E%87%E6%B3%A2%E5%8A%A8%E5%BD%92%E5%9B%A0"><span class="toc-number">2.2.</span> <span class="toc-text">电商：支付转化率波动归因</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References-%E5%8F%82%E8%80%83"><span class="toc-number">3.</span> <span class="toc-text">References 参考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Definition-%E5%AE%9A%E4%B9%89"><span class="toc-number">1.</span> <span class="toc-text">Definition 定义</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">例子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%BB%E7%96%97%EF%BC%9A%E8%82%BE%E7%BB%93%E7%9F%B3%E6%B2%BB%E7%96%97%E6%96%B9%E6%A1%88%E6%95%88%E6%9E%9C"><span class="toc-number">2.1.</span> <span class="toc-text">医疗：肾结石治疗方案效果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References-%E5%8F%82%E8%80%83"><span class="toc-number">3.</span> <span class="toc-text">References 参考</span></a></li></ol>
       </div>
     
 
