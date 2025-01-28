@@ -14,7 +14,7 @@
 <meta property="og:description" content="介绍常用的指标异动归因分析方法  分析过程指标异动归因分析的基本流程：  明确关注的核心指标，以及对应的业务目标 梳理相关的业务流程，明确可拆解的纵向、横向维度 纵向分析：对同一指标在不同时间里的发展变化进行分析 横向分析：对同一指标在同一时间里进行多维分析   纵向分析，定义异动，并发现异动 横向分析，拆解维度，定位异动的主要原因，发现业务的可优化点  异动检测按照时间等纵向维度观察指标变">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-28T05:11:55.000Z">
-<meta property="article:modified_time" content="2025-01-28T05:40:10.260Z">
+<meta property="article:modified_time" content="2025-01-28T05:41:10.562Z">
 <meta property="article:author" content="wst">
 <meta property="article:tag" content="Attribution">
 <meta name="twitter:card" content="summary">
@@ -237,7 +237,30 @@
 </li>
 </ol>
 <h2 id="方法选择"><a href="#方法选择" class="headerlink" title="方法选择"></a>方法选择</h2><p>也即贡献度计算方法。根据不同的指标类型，选择合适的贡献度计算方法。</p>
-<p>|指标类型|归因方法|指标例子|<br>|:—-::—–|:——|<br>|加法指标|Delta法|DAU &#x3D; 新客DAU + 老客DAU <br> GMV &#x3D; 新客GMV + 老客GMV|<br>|除法指标|剔除法、占比加权法|点击率 &#x3D; 点击次数 &#x2F; 曝光次数 <br> 满意度 &#x3D; 满意问卷量 &#x2F; 问卷提交量 <br> 好评率 &#x3D; 好评订单量 &#x2F; 评价订单量|<br>|乘法指标|LMDI法||</p>
+<table>
+<thead>
+<tr>
+<th align="center">指标类型</th>
+<th align="left">归因方法</th>
+<th align="left">指标例子</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">加法指标</td>
+<td align="left">Delta法</td>
+<td align="left">DAU &#x3D; 新客DAU + 老客DAU <br> GMV &#x3D; 新客GMV + 老客GMV</td>
+</tr>
+<tr>
+<td align="center">除法指标</td>
+<td align="left">剔除法、占比加权法</td>
+<td align="left">点击率 &#x3D; 点击次数 &#x2F; 曝光次数 <br> 满意度 &#x3D; 满意问卷量 &#x2F; 问卷提交量 <br> 好评率 &#x3D; 好评订单量 &#x2F; 评价订单量</td>
+</tr>
+<tr>
+<td align="center">乘法指标</td>
+<td align="left">LMDI法</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
 <ol>
 <li><strong>加法指标</strong>：目标指标可以拆解为多个维度指标的加和（可加型量值类指标）。适用<strong>Delta法</strong>。</li>
 <li><strong>除法指标</strong>：目标指标可以拆解为两个量值类指标相除（率值类指标）。适用<strong>剔除法</strong>、<strong>占比加权法</strong>（即组内组间拆解法）。</li>
