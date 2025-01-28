@@ -4,6 +4,44 @@
   
     
     <entry>
+      <title>IndicatorVariationAttribution</title>
+      <link href="/IndicatorVariationAttribution-1.html"/>
+      <url>/IndicatorVariationAttribution-1.html</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Data Analysis | Attribution of Indicator Variation</title>
+      <link href="/IndicatorVariationAttribution.html"/>
+      <url>/IndicatorVariationAttribution.html</url>
+      
+        <content type="html"><![CDATA[<span id="more"></span><blockquote><p>介绍常用的指标异动归因分析方法</p></blockquote><h2 id="分析过程"><a href="#分析过程" class="headerlink" title="分析过程"></a>分析过程</h2><p>指标异动归因分析的基本流程：</p><ol><li>明确关注的核心指标，以及对应的业务目标</li><li>梳理相关的业务流程，明确可拆解的纵向、横向维度<ul><li>纵向分析：对同一指标在不同时间里的发展变化进行分析</li><li>横向分析：对同一指标在同一时间里进行多维分析</li></ul></li><li>纵向分析，定义异动，并发现异动</li><li>横向分析，拆解维度，定位异动的主要原因，发现业务的可优化点</li></ol><h2 id="异动检测"><a href="#异动检测" class="headerlink" title="异动检测"></a>异动检测</h2><p>按照时间等纵向维度观察指标变化趋势，通过摸底分析定义指标异常波动；结合纵向分析，发现指标的异常波动。<br>常用异动检测方法：</p><ol><li><strong>算法</strong>：通过对时间序列形式的指标历史数据进行学习建模，预测指标的正常波动区间，超过区间的波动则视为异动。<ul><li>Holt-winters算法（三次指数滑动平均算法）</li><li>Prophet算法</li></ul></li><li><strong>规则</strong>：通过摸底分析，划定指标同环比的正常波动区间，超出区间的同环比波动则视为异动。如：<ul><li>指标A环比小于30%</li><li>指标B同比绝对值超过20%</li></ul></li></ol><h2 id="异动本质"><a href="#异动本质" class="headerlink" title="异动本质"></a>异动本质</h2><p>异动的本质在于<strong>比较</strong>，比较包含以下要点：</p><ol><li>评估指标：明确比较的业务指标</li><li>参照对象：界定参照对象的研究群体<ul><li>纵向：同一群体在不同时间里的比较分析</li><li>横向：同一时间不同群体之间的比较分析</li></ul></li><li>衡量方式：<ul><li>相对比较：参照对象的比值差异</li><li>绝对比较：参照对象的绝对差值</li></ul></li></ol><h2 id="横向归因"><a href="#横向归因" class="headerlink" title="横向归因"></a>横向归因</h2><p>发现指标异常波动后，先<strong>排外因</strong>，后<strong>定内因</strong>。</p><ol><li><strong>排外因</strong>：<ul><li>数据统计是否有误</li><li>产品或策略更新是否存在问题</li><li>相关政策&#x2F;规则是否变动</li><li>大促&#x2F;营销策略等影响</li><li>……</li></ul></li><li><strong>定内因</strong>：拆解维度进行横向分析，结合贡献度（贡献度计算方法见归因方法）等方法，定位异动的主要原因，发现存在的业务问题和可优化点。<ul><li>怎么拆：根据业务类型、业务流程、业务面临的实际问题聚焦，事前与业务同学充分讨论，捕捉业务动作、业务核心关注点灯关键信息。</li><li>拆多深：异动归因以解决业务问题为原则，定位到业务侧能有比较明确的改善落脚点（业务策略抓手）即可，切勿盲目下钻。</li></ul></li></ol><h2 id="归因方法"><a href="#归因方法" class="headerlink" title="归因方法"></a>归因方法</h2><p>也即贡献度计算方法。根据不同的指标类型，选择合适的贡献度计算方法。</p><p>|指标类型|归因方法|指标例子|<br>|:—-::—–|:——|<br>|加法指标|Delta法|DAU &#x3D; 新客DAU + 老客DAU <br> GMV &#x3D; 新客GMV + 老客GMV|<br>|除法指标|剔除法、占比加权法|点击率 &#x3D; 点击次数 &#x2F; 曝光次数 <br> 满意度 &#x3D; 满意问卷量 &#x2F; 问卷提交量 <br> 好评率 &#x3D; 好评订单量 &#x2F; 评价订单量|<br>|乘法指标|LMDI法||</p><ol><li><strong>加法指标</strong>：目标指标可以拆解为多个维度指标的加和（可加型量值类指标）。适用<strong>Delta法</strong>。</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> Data Analysis </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Attribution </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Cartoon</title>
       <link href="/Cartoon.html"/>
       <url>/Cartoon.html</url>
