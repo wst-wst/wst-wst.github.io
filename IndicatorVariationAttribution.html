@@ -14,7 +14,7 @@
 <meta property="og:description" content="介绍常用的指标异动归因分析方法  分析过程指标异动归因分析的基本流程：  明确关注的核心指标，以及对应的业务目标 梳理相关的业务流程，明确可拆解的纵向、横向维度 纵向分析：对同一指标在不同时间里的发展变化进行分析 横向分析：对同一指标在同一时间里进行多维分析   纵向分析，定义异动，并发现异动 横向分析，拆解维度，定位异动的主要原因，发现业务的可优化点  异动检测按照时间等纵向维度观察指标变">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-28T05:11:55.000Z">
-<meta property="article:modified_time" content="2025-01-28T05:42:50.877Z">
+<meta property="article:modified_time" content="2025-06-09T15:52:14.300Z">
 <meta property="article:author" content="wst">
 <meta property="article:tag" content="Attribution">
 <meta name="twitter:card" content="summary">
@@ -127,7 +127,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">分析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%A3%80%E6%B5%8B"><span class="toc-number">2.</span> <span class="toc-text">异动检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%9C%AC%E8%B4%A8"><span class="toc-number">3.</span> <span class="toc-text">异动本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%AA%E5%90%91%E5%BD%92%E5%9B%A0"><span class="toc-number">4.</span> <span class="toc-text">横向归因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%80%89%E6%8B%A9"><span class="toc-number">5.</span> <span class="toc-text">方法选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%B4%E5%BA%A6%E5%BD%92%E5%9B%A0"><span class="toc-number">6.</span> <span class="toc-text">维度归因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Delta%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">Delta法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%94%E9%99%A4%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">剔除法</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">分析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%A3%80%E6%B5%8B"><span class="toc-number">2.</span> <span class="toc-text">异动检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%9C%AC%E8%B4%A8"><span class="toc-number">3.</span> <span class="toc-text">异动本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%AA%E5%90%91%E5%BD%92%E5%9B%A0"><span class="toc-number">4.</span> <span class="toc-text">横向归因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%80%89%E6%8B%A9"><span class="toc-number">5.</span> <span class="toc-text">方法选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%B4%E5%BA%A6%E5%BD%92%E5%9B%A0"><span class="toc-number">6.</span> <span class="toc-text">维度归因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Delta%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">Delta法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%94%E9%99%A4%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">剔除法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E6%A0%87%E5%BD%92%E5%9B%A0"><span class="toc-number">7.</span> <span class="toc-text">指标归因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LMDI"><span class="toc-number">7.1.</span> <span class="toc-text">LMDI</span></a></li></ol></li></ol>
       </div>
     
   </span>
@@ -282,16 +282,21 @@
 <li>贡献：<ul>
 <li>$C_j$：因子$j$对绝对波动$\Delta Y$的贡献度（Contribution），$\sum_{j&#x3D;1}^n C_j &#x3D; 100%$</li>
 <li>$V_j$：因子$j$对绝对波动$\Delta Y$的贡献值（Contribution Value），$V_j &#x3D; C_j \dot \Delta Y$，$\sum_{j&#x3D;1}^n V_j &#x3D; \Delta Y$</li>
-<li>$RV_j$：因子$j$对相对波动$\Delta Y %$的贡献值，$\sum_{j&#x3D;1}^n RV_j &#x3D; \Delta Y %$<br>其中，$T$为对比期（当期），$0$为基期（上一期）。</li>
+<li>$RV_j$：因子$j$对相对波动$\Delta Y %$的贡献值，$\sum_{j&#x3D;1}^n RV_j &#x3D; \Delta Y %$</li>
 </ul>
 </li>
 </ul>
+<p>其中，$T$为对比期（当期），$0$为基期（上一期）。</p>
 <h2 id="维度归因"><a href="#维度归因" class="headerlink" title="维度归因"></a>维度归因</h2><p>将指标在同一维度上进行拆解，计算各个因子对指标波动的贡献度，发现影响指标波动的主要原因（因子）。</p>
 <ul>
 <li>同向影响因子：对目标指标同向变动做出贡献的因子（因素）；贡献度为正的因子为同向影响因子</li>
 <li>反向影响因子：对目标指标反向变动做出贡献的因子（因素）；贡献度为负的因子为反向影响因子</li>
 </ul>
-<h3 id="Delta法"><a href="#Delta法" class="headerlink" title="Delta法"></a>Delta法</h3><h3 id="剔除法"><a href="#剔除法" class="headerlink" title="剔除法"></a>剔除法</h3>
+<h3 id="Delta法"><a href="#Delta法" class="headerlink" title="Delta法"></a>Delta法</h3><h3 id="剔除法"><a href="#剔除法" class="headerlink" title="剔除法"></a>剔除法</h3><h2 id="指标归因"><a href="#指标归因" class="headerlink" title="指标归因"></a>指标归因</h2><p>目标指标$Y$受到多个因子的叠加影响。下面将使用<strong>指数分解方法</strong>，计算乘法指标中每个因子（维度）对目标指标的波动贡献。</p>
+<p>首先对目标指标进行结构拆解（Divisia分解），以考虑到结构化变化对目标指标的影响（可以理解为维度拆解）。<br>$$Y &#x3D; \sum_{i&#x3D;1}^m Y_i &#x3D; Y_1 + Y_2 + \dots + Y_m$$</p>
+<p>在每一个子类（sub-category）里，指标$Y_i$又受到$n$个因素的叠加影响。</p>
+<h3 id="LMDI"><a href="#LMDI" class="headerlink" title="LMDI"></a>LMDI</h3><p>对数平均迪氏指数法（LMDI，Log Mean Divisia Index）：AMDI分解法存在残值问题，Ang等研究提出LMDI方法，改进AMDI的残值问题。</p>
+
   </div>
 </article>
 
@@ -328,7 +333,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">分析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%A3%80%E6%B5%8B"><span class="toc-number">2.</span> <span class="toc-text">异动检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%9C%AC%E8%B4%A8"><span class="toc-number">3.</span> <span class="toc-text">异动本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%AA%E5%90%91%E5%BD%92%E5%9B%A0"><span class="toc-number">4.</span> <span class="toc-text">横向归因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%80%89%E6%8B%A9"><span class="toc-number">5.</span> <span class="toc-text">方法选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%B4%E5%BA%A6%E5%BD%92%E5%9B%A0"><span class="toc-number">6.</span> <span class="toc-text">维度归因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Delta%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">Delta法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%94%E9%99%A4%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">剔除法</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%86%E6%9E%90%E8%BF%87%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">分析过程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%A3%80%E6%B5%8B"><span class="toc-number">2.</span> <span class="toc-text">异动检测</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%82%E5%8A%A8%E6%9C%AC%E8%B4%A8"><span class="toc-number">3.</span> <span class="toc-text">异动本质</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A8%AA%E5%90%91%E5%BD%92%E5%9B%A0"><span class="toc-number">4.</span> <span class="toc-text">横向归因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95%E9%80%89%E6%8B%A9"><span class="toc-number">5.</span> <span class="toc-text">方法选择</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BB%B4%E5%BA%A6%E5%BD%92%E5%9B%A0"><span class="toc-number">6.</span> <span class="toc-text">维度归因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Delta%E6%B3%95"><span class="toc-number">6.1.</span> <span class="toc-text">Delta法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%89%94%E9%99%A4%E6%B3%95"><span class="toc-number">6.2.</span> <span class="toc-text">剔除法</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8C%87%E6%A0%87%E5%BD%92%E5%9B%A0"><span class="toc-number">7.</span> <span class="toc-text">指标归因</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#LMDI"><span class="toc-number">7.1.</span> <span class="toc-text">LMDI</span></a></li></ol></li></ol>
       </div>
     
 
