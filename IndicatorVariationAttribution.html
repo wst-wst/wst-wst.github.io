@@ -14,7 +14,7 @@
 <meta property="og:description" content="介绍常用的指标异动归因分析方法  分析过程指标异动归因分析的基本流程：  明确关注的核心指标，以及对应的业务目标 梳理相关的业务流程，明确可拆解的纵向、横向维度 纵向分析：对同一指标在不同时间里的发展变化进行分析 横向分析：对同一指标在同一时间里进行多维分析   纵向分析，定义异动，并发现异动 横向分析，拆解维度，定位异动的主要原因，发现业务的可优化点  异动检测按照时间等纵向维度观察指标变">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-28T05:11:55.000Z">
-<meta property="article:modified_time" content="2025-06-09T16:35:04.387Z">
+<meta property="article:modified_time" content="2025-06-09T16:37:33.346Z">
 <meta property="article:author" content="wst">
 <meta property="article:tag" content="Attribution">
 <meta name="twitter:card" content="summary">
@@ -301,7 +301,12 @@
 <li><strong>乘法分解</strong>：将目标指标的变化倍数$\mathrm{RATIO}$分解到各个因子上；上式等号两边同时除以$Y^t$，并对时间$t$进行积分，再对等号两边取指数$\exp$<br> $$<br> \begin{aligned}<br> D_{tot} &amp;&#x3D; \frac{Y^T}{Y^0} \\<br> &amp;&#x3D; \prod_{j&#x3D;1}^n D_{x_j} \\<br> &amp;&#x3D; D_{x_1} \cdot D_{x_2} \cdot \dots \cdot D_{x_n} \\<br> \int_0^T \frac{1}{Y^t} \frac{\mathrm{d} Y^t}{\mathrm{d} t} &amp;&#x3D; \int_0^T \frac{\mathrm{d} \ln Y^t}{\mathrm{d} t} \\<br> &amp;&#x3D; \ln Y^T - \ln Y^0 &#x3D; \ln\left( \frac{Y^T}{Y^0} \right) \\<br> &amp;&#x3D; \sum_{j&#x3D;1}^n \int_0^T \sum_{i&#x3D;1}^m \omega_i^t \frac{\mathrm{d} \ln x_{j,i}^t}{\mathrm{d} t}  \\<br> D_{tot} &amp;&#x3D; \prod_{j&#x3D;1}^n D_{x_j}^n \\<br> &amp;&#x3D; \exp{\left(\sum_{j&#x3D;1}^n \int_0^T \sum_{i&#x3D;1}^m \omega_i^t \frac{\mathrm{d} \ln x_{j,i}^t}{\mathrm{d} t}\right)} \\<br> &amp;&#x3D; \prod_{j&#x3D;1}^n \exp{\left( \sum_{i&#x3D;1}^m \omega_i^t \frac{\mathrm{d} \ln x_{j,i}^t}{\mathrm{d} t} \right)} \\<br> D_{x_j} &amp;&#x3D; \exp{\left( \sum_{i&#x3D;1}^m \omega_i^t \frac{\mathrm{d} \ln x_{j,i}^t}{\mathrm{d} t} \right)}<br> \end{aligned}<br> $$<br>其中，$tot$表示“total”，结构性变化、所有因子对目标指标的综合影响。</li>
 </ol>
 <p>Divisia分解后的公式，计算比较困难，通常采用近似计算。近似方法不同，则产生不同的分解结果。</p>
-<h4 id="AMDI"><a href="#AMDI" class="headerlink" title="AMDI"></a>AMDI</h4><h4 id="LMDI"><a href="#LMDI" class="headerlink" title="LMDI"></a>LMDI</h4><p>对数平均迪氏指数法（LMDI，Log Mean Divisia Index）：AMDI分解法存在残值问题，Ang等研究提出LMDI方法，改进AMDI的残值问题。</p>
+<h4 id="AMDI"><a href="#AMDI" class="headerlink" title="AMDI"></a>AMDI</h4><p>算术平均迪氏指数法（AMDI，Arithmetic Mean Divisia Index）：</p>
+<ol>
+<li><strong>加法分解</strong>：<br> $$<br> \begin{aligned}<br> \Delta Y_{x_j} &amp;&#x3D; \int_0^T \sum_{i&#x3D;1}^m Y_i^t \frac{\mathrm{d} \ln x_{j,i}^t}{\mathrm{d} t} \\<br> &amp;&#x3D; \sum_{i&#x3D;1}^m \frac{Y^T + Y^0}{2} \ln \left( \frac{x_{j,i}^T}{ x_{j,i}^0 } \right)<br> \end{aligned}<br> $$</li>
+<li><strong>乘法分解</strong>：</li>
+</ol>
+<h4 id="LMDI"><a href="#LMDI" class="headerlink" title="LMDI"></a>LMDI</h4><p>对数平均迪氏指数法（LMDI，Log Mean Divisia Index）：AMDI分解法存在残值问题，Ang等研究提出LMDI方法，改进AMDI的残值问题。</p>
 
   </div>
 </article>
