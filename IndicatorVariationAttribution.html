@@ -14,7 +14,7 @@
 <meta property="og:description" content="介绍常用的指标异动归因分析方法  分析过程指标异动归因分析的基本流程：  明确关注的核心指标，以及对应的业务目标 梳理相关的业务流程，明确可拆解的纵向、横向维度 纵向分析：对同一指标在不同时间里的发展变化进行分析 横向分析：对同一指标在同一时间里进行多维分析   纵向分析，定义异动，并发现异动 横向分析，拆解维度，定位异动的主要原因，发现业务的可优化点  异动检测按照时间等纵向维度观察指标变">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-01-28T05:11:55.000Z">
-<meta property="article:modified_time" content="2025-06-18T09:28:59.302Z">
+<meta property="article:modified_time" content="2025-06-18T09:33:40.596Z">
 <meta property="article:author" content="wst">
 <meta property="article:tag" content="Attribution">
 <meta name="twitter:card" content="summary">
@@ -309,7 +309,7 @@
 <h4 id="LMDI"><a href="#LMDI" class="headerlink" title="LMDI"></a>LMDI</h4><p>对数平均迪氏指数法（LMDI，Log Mean Divisia Index）：AMDI分解法存在残值问题，Ang等研究提出LMDI方法，改进AMDI的残值问题。</p>
 <ol>
 <li><strong>加法分解</strong>：<br> $$<br> \begin{aligned}<br> \Delta Y_{x_j} &amp;&#x3D; \int_0^T \sum_{i&#x3D;1}^m Y_i^t \frac{\mathrm{d} \ln x_{j,i}^t}{\mathrm{d} t} \\<br> &amp;&#x3D; \sum_{i&#x3D;1}^m L(Y_i^T, Y_i^0) \ln\left( \frac{x_{j,i}^T}{x_{j,i}^0} \right) \\<br> &amp;&#x3D; \sum_{i&#x3D;1}^m \frac{ Y_i^T - Y_i^0 }{ \ln Y_i^T - \ln Y_i^0 } \ln\left( \frac{x_{j,i}^T}{x_{j,i}^0} \right) \\<br> &amp;&#x3D; \sum_{i&#x3D;1}^m (Y_i^T - Y_i^0) \frac{\ln\left( \frac{x_{j,i}^T}{x_{j,i}^0} \right)}{\ln\left( \frac{Y_i^T}{Y_i^0} \right)}<br> \end{aligned}<br> $$<ul>
-<li>因子$j$对相对波动$\Delta Y \% $的贡献值为<br> $RV_j &#x3D; \frac{Y_^T - Y^0}{ \ln Y^T - \ln Y^0 } \cdot \frac{\ln\left(\frac{x_j^T}{x_j^0}\right)}{Y^0}$</li>
+<li>因子$j$对相对波动$\Delta Y \% $的贡献值为<br> $RV_j &#x3D; \frac{Y^T - Y^0}{ \ln Y^T - \ln Y^0 } \cdot \frac{\ln\left(\frac{x_j^T}{x_j^0}\right)}{Y^0}$</li>
 <li>因子$j$对绝对波动$\Delta Y$的贡献度为 $C_j &#x3D; RV_j \cdot \frac{Y^0}{\Delta Y} &#x3D; \frac{\ln x_j^T - \ln x_j^0}{\ln Y^T - \ln Y^0}$</li>
 </ul>
 </li>
