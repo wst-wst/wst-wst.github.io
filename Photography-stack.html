@@ -14,7 +14,7 @@
 <meta property="og:description" content="Sequator安装使用Sequator软件暂无MacOS版本，需在GitHub上下载Whisky软件，搭建Windows容器、再运行Sequator软件。  下载并安装Whisky：在GitHub-Whisky上下载并安装Whisky；点击「Tags」，找到「Releases」，点击下载Whisky.zip；解压并安装 下载Sequator：https:&#x2F;&#x2F;www.softpedia.com&#x2F;g">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-31T07:39:59.000Z">
-<meta property="article:modified_time" content="2025-08-31T07:53:36.219Z">
+<meta property="article:modified_time" content="2025-08-31T08:01:29.934Z">
 <meta property="article:author" content="wst">
 <meta property="article:tag" content="Photography">
 <meta property="article:tag" content="Stack">
@@ -128,7 +128,7 @@
     
     
       <div id="toc">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sequator"><span class="toc-number">1.</span> <span class="toc-text">Sequator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">安装使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%B6%E6%B2%B3%E5%A0%86%E6%A0%88"><span class="toc-number">1.2.</span> <span class="toc-text">银河堆栈</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sequator"><span class="toc-number">1.</span> <span class="toc-text">Sequator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">安装使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%B6%E6%B2%B3%E5%A0%86%E6%A0%88"><span class="toc-number">1.2.</span> <span class="toc-text">银河堆栈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%8E%A8%E8%8D%90"><span class="toc-number">2.</span> <span class="toc-text">参考推荐</span></a></li></ol>
       </div>
     
   </span>
@@ -180,14 +180,30 @@
 <li>打开Whisky，新建一个Windows容器，点击右下角的「运行」，找到<code>Sequator.exe</code>，打开即可使用</li>
 </ol>
 <h3 id="银河堆栈"><a href="#银河堆栈" class="headerlink" title="银河堆栈"></a>银河堆栈</h3><ol>
+<li>基础准备：<ul>
 <li>Star Images：双击「Star Images」或右键单击「Star Images」选择「+Add」，选入用于堆栈的所有照片；建议使用RAW（.CRS）或TIF格式照片</li>
 <li>Base Image：「Star Images」加载后会自动选择一张照片作为「Base Image」，也可双击「Base Image」重新选择</li>
 <li>Output：双击或右键单击「Outpu」设置存储路径和文件名，文件格式设置为<code>.tif</code></li>
+</ul>
+</li>
+<li>参数设置：<ul>
 <li>Composition：Align Starts、Freeze ground（勾选Selective）</li>
 <li>Sky region：Irregular mask（用鼠标点选天空区域，并勾选Auxiliary highlight）</li>
 <li>Auto brightness：On</li>
-<li></li>
+<li>High dynamic range：On</li>
+<li>Remove dynamic noises：On</li>
+<li>Reduce distor. effects：Auto</li>
+<li>Reduct highlight pollution：Off</li>
+<li>Enhance star light：Off</li>
+<li>Merge 4 pixels：Off（如果需要缩星可以打开）</li>
+<li>Time-lapse：Off</li>
+</ul>
+</li>
 </ol>
+<p>堆栈完成后可用PS（Photoshop）或LR（Lightroom）进行调色。</p>
+<h2 id="参考推荐"><a href="#参考推荐" class="headerlink" title="参考推荐"></a>参考推荐</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://xhslink.com/n/2PnJPsR9WBj">小红书：你一定能用上的无堆栈银河后期方法</a>：可参考LR调色参数</li>
+</ul>
 
   </div>
 </article>
@@ -225,7 +241,7 @@
     
     
       <div id="toc-footer" style="display: none">
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sequator"><span class="toc-number">1.</span> <span class="toc-text">Sequator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">安装使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%B6%E6%B2%B3%E5%A0%86%E6%A0%88"><span class="toc-number">1.2.</span> <span class="toc-text">银河堆栈</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Sequator"><span class="toc-number">1.</span> <span class="toc-text">Sequator</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8"><span class="toc-number">1.1.</span> <span class="toc-text">安装使用</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%93%B6%E6%B2%B3%E5%A0%86%E6%A0%88"><span class="toc-number">1.2.</span> <span class="toc-text">银河堆栈</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E6%8E%A8%E8%8D%90"><span class="toc-number">2.</span> <span class="toc-text">参考推荐</span></a></li></ol>
       </div>
     
 
