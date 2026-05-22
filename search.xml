@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Oaxaca-Blinder (OB) Decomposition</title>
+      <link href="/Oaxaca-Blinder.html"/>
+      <url>/Oaxaca-Blinder.html</url>
+      
+        <content type="html"><![CDATA[<p>Oaxaca-Blinder (OB)分解法主要通过多元线性回归模型将两个群体的因变量均值差异拆解为自变量（自身特征）的差异和回归系数（群体效率）的差异。具体可分为三段式分解和两段式分解。</p><p>假设需要比较两个群体（$A$、$B$）在某个指标$Y$上的均值差异（$\Delta Y &#x3D; \bar{Y}_A - \bar{Y}_B$）。</p><p>对两个群体分别建立多元线性回归模型：<br>$$Y_i &#x3D; X_i \beta_i + \epsilon_i \ (i&#x3D;A,B)$$</p><p>在线性回归中，残差$\epsilon_i$的期望值为0，因此两组指标的</p><ul><li>样本均值为$\bar{Y}_i &#x3D; \bar{X}_i \beta_i$</li><li>总体均值差异为$\Delta Y &#x3D; \bar{Y}_A - \bar{Y}_B &#x3D; \bar{X}_A \beta_A - \bar{X}_B \beta_B$</li></ul><h2 id="三段式分解"><a href="#三段式分解" class="headerlink" title="三段式分解"></a>三段式分解</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Attribution </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Photography | 星空堆栈</title>
       <link href="/Photography-stack.html"/>
       <url>/Photography-stack.html</url>
