@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>AI Deployment</title>
+      <link href="/AI-Deployment.html"/>
+      <url>/AI-Deployment.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="IDE"><a href="#IDE" class="headerlink" title="IDE"></a>IDE</h2><h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h3 id="Cursor"><a href="#Cursor" class="headerlink" title="Cursor"></a>Cursor</h3><ul><li><a href="https://cursor.com/cli">Cursor CLI</a>: Cursor CLI 是 Cursor 提供的命令行工具，用于部署和管理 Cursor 模型。<ul><li>安装 Cursor CLI: <code>curl https://cursor.com/install -fsS | bash</code></li></ul></li></ul>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> AI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Oaxaca-Blinder (OB) Decomposition</title>
       <link href="/Oaxaca-Blinder.html"/>
       <url>/Oaxaca-Blinder.html</url>
