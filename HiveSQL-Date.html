@@ -179,8 +179,16 @@
   </header>
   
 
-  <div class="content e-content" itemprop="articleBody">
-    <blockquote>
+  
+  <div class="post-with-toc">
+    
+    <aside class="toc-sidebar" id="toc-sidebar">
+      <div class="toc-sidebar-title">目录</div>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">基本语法</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%A0%BC%E5%BC%8F%E8%BD%AC%E6%8D%A2"><span class="toc-number">2.</span> <span class="toc-text">格式转换</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F-%E4%B8%8E-%E6%97%A5%E6%9C%9F"><span class="toc-number">2.1.</span> <span class="toc-text">日期 与 日期</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%9C%9F-%E4%B8%8E-%E6%97%B6%E9%97%B4%E6%88%B3"><span class="toc-number">2.2.</span> <span class="toc-text">日期 与 时间戳</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%B6%E9%97%B4%E6%88%B3-%E4%B8%8E-%E6%97%B6%E9%97%B4%E6%88%B3"><span class="toc-number">2.3.</span> <span class="toc-text">时间戳 与 时间戳</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E6%97%A5%E6%9C%9F"><span class="toc-number">3.</span> <span class="toc-text">常用日期</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%91%A8%E5%BA%A6"><span class="toc-number">3.1.</span> <span class="toc-text">周度</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%9C%88%E5%BA%A6"><span class="toc-number">3.2.</span> <span class="toc-text">月度</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8F%98%E9%87%8F"><span class="toc-number">4.</span> <span class="toc-text">自定义变量</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Reference"><span class="toc-number">5.</span> <span class="toc-text">Reference</span></a></li></ol>
+    </aside>
+    
+    <div class="content e-content" itemprop="articleBody">
+      <blockquote>
 <p>约定：<br><code>date</code>：<code>yyyyMMdd</code>格式的日期<br><code>date_</code>：<code>yyyy-MM-dd</code>格式的日期<br><code>ts</code>：时间戳</p>
 </blockquote>
 <h2 id="基本语法"><a href="#基本语法" class="headerlink" title="基本语法"></a>基本语法</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">----- 周几/星期几 -----</span></span><br><span class="line"><span class="comment">-- 取值范围1-7</span></span><br><span class="line"><span class="built_in">cast</span>(date_format(date_, <span class="string">&#x27;u&#x27;</span>) <span class="keyword">as</span> <span class="type">int</span>)  </span><br><span class="line"><span class="comment">-- 取值范围0-6</span></span><br><span class="line"><span class="built_in">cast</span>(pmod(datediff(date_, <span class="string">&#x27;1900-01-07&#x27;</span>), <span class="number">7</span>)</span><br></pre></td></tr></table></figure>
@@ -200,6 +208,7 @@
 
 
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2>
+    </div>
   </div>
 </article>
 

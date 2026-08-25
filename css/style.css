@@ -1675,3 +1675,59 @@ code {
 .open:after {
   content: "▲";
 }
+@media (min-width: 1200px) {
+  .post-with-toc {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.toc-sidebar {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .toc-sidebar {
+    display: block;
+    position: fixed;
+    left: 1rem;
+    top: 4rem;
+    width: 200px;
+    max-height: calc(100vh - 6rem);
+    overflow-y: auto;
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.8;
+  }
+  .toc-sidebar .toc-sidebar-title {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #666;
+  }
+  .toc-sidebar .toc {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .toc-sidebar .toc-item {
+    list-style: none;
+  }
+  .toc-sidebar .toc-link {
+    color: #383838;
+    text-decoration: none;
+    border-bottom: none !important;
+    background-image: none !important;
+    display: block;
+    padding: 0.15rem 0;
+  }
+  .toc-sidebar .toc-link:hover {
+    color: #d480aa;
+  }
+  .toc-sidebar .toc-child {
+    padding-left: 1rem;
+    list-style: none;
+  }
+  .toc-sidebar .toc-number {
+    display: none;
+  }
+}
