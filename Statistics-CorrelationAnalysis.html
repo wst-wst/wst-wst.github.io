@@ -179,16 +179,8 @@
   </header>
   
 
-  
-  <div class="post-with-toc">
-    
-    <aside class="toc-sidebar" id="toc-sidebar">
-      <div class="toc-sidebar-title">目录</div>
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Spearman"><span class="toc-number">1.</span> <span class="toc-text">Spearman</span></a></li></ol>
-    </aside>
-    
-    <div class="content e-content" itemprop="articleBody">
-      <h2 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h2><p>应用SQL和Excel计算Spearman相关系数和$p$值：<br>变量： $X$和$Y$<br>过程：</p>
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="Spearman"><a href="#Spearman" class="headerlink" title="Spearman"></a>Spearman</h2><p>应用SQL和Excel计算Spearman相关系数和$p$值：<br>变量： $X$和$Y$<br>过程：</p>
 <ol>
 <li>先分别对变量排序（<code>row_number</code>）得到序号<code>rn</code>，再分别对变量$X$和$Y$<code>dense_rank()</code>排序得到<code>dr</code>，针对<code>dr</code>计算<code>rn</code>的平均数作为变量的<code>Rank</code> $R(X)$和$R(Y)$。</li>
 <li>计算$d_i &#x3D; R(X_i) - R(Y_i)$</li>
@@ -197,7 +189,6 @@
 <li>应用Excel计算$p$值：<code>TDIST(ABS(t), n-2, 2)</code>，其中2表示双边检验（可改为1，表示单边检验）</li>
 </ol>
 
-    </div>
   </div>
 </article>
 
